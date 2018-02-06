@@ -1,0 +1,29 @@
+//-------------------- mixins -----------------------
+@mixin gradient-orange {
+    background-image: linear-gradient(to top, #fc4f13 0%, #fc9113 100%);
+}
+@mixin gradient-red {
+    background-image: linear-gradient(to top, #c10029 0%, #eb2653 100%);
+}
+
+//media queries
+@mixin large {
+    @media only screen and (max-width : $large-width + 20px) {
+        @content;
+    }
+}
+@mixin desktop {
+    @media only screen and (max-width : $desktop-width + 20px) {
+        @content;
+    }
+}
+@mixin tablet {
+    @media only screen and (max-width : $tablet-width) {
+        @content;
+    }
+}
+@mixin mobile {
+    @media only screen and (max-width : $mobile-width) {
+        @content;
+    }
+}
